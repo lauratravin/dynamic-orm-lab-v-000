@@ -62,11 +62,12 @@ class InteractiveRecord
 
     def self.find_by(search={})
 
-      search.map { |k,v|
+         search.keys
+      search.map do |k,v|
           binding.pry
             key = k
             val = v
-         }
+         end
       sql = "SELECT * FROM #{self.table_name} WHERE ? = ? "
       DB[:conn].execute(sql,key, val)
     end
