@@ -66,7 +66,7 @@ class InteractiveRecord
          k = search.keys[0].to_s
          v = search[search.keys[0]]
       binding.pry
-      sql = "SELECT * FROM #{self.table_name} WHERE #{k} = #{v}"
+      sql = "SELECT * FROM #{self.table_name} WHERE #{k} = '#{v}'"
       binding.pry
       DB[:conn].execute(sql)
     end
