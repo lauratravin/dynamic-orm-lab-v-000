@@ -61,7 +61,7 @@ class InteractiveRecord
       end
 
     def self.find_by(search={})
-
+       binding.pry
          k = search.keys[0].to_s
          v = search[search.keys[0]]
       binding.pry
