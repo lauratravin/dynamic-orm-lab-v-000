@@ -66,7 +66,7 @@ class InteractiveRecord
          v = search[search.keys[0]]
          binding.pry
       sql = "SELECT * FROM #{self.table_name} WHERE ? = ? "
-      DB[:conn].execute(sql,k, v)
+      DB[:conn].execute(sql,k,v)
     end
 
 end
